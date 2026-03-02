@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Footer } from "@/components/Footer";
+import { CookieBanner } from "@/components/CookieBanner";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -196,6 +197,7 @@ export default function RootLayout({
       >
         <main className="flex-1">{children}</main>
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   );

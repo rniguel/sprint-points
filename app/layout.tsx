@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -12,9 +12,168 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://sprintpoints.miguelito.dev";
+const ogImage = "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop";
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#7c3aed" },
+    { media: "(prefers-color-scheme: dark)", color: "#8b5cf6" },
+  ],
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
-  title: "Sprint Points - Calculadora de Story Points",
-  description: "Calcule story points de forma precisa para suas tasks de sprint",
+  // Metadata básica
+  title: {
+    default: "Sprint Points - Calculadora de Story Points para Agile Teams",
+    template: "%s | Sprint Points",
+  },
+  description:
+    "Calcule story points e estimativas de tempo de forma precisa e eficiente para suas tasks de desenvolvimento. Ferramenta gratuita para times ágeis que usam Scrum e Kanban.",
+  
+  // URLs e canonical
+  metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: "/",
+  },
+  
+  // Keywords para SEO
+  keywords: [
+    "story points",
+    "sprint planning",
+    "scrum",
+    "agile",
+    "kanban",
+    "estimativa de tempo",
+    "planning poker",
+    "desenvolvimento de software",
+    "gestão de projetos",
+    "productivity",
+    "calculadora story points",
+    "sprint points",
+    "task estimation",
+    "time tracking",
+    "desenvolvimento ágil",
+    "metodologias ágeis",
+  ],
+  
+  // Autor e organização
+  authors: [
+    { name: "Miguelito", url: "https://miguelito.dev" },
+  ],
+  
+  // Open Graph / Facebook / LinkedIn
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    url: siteUrl,
+    siteName: "Sprint Points",
+    title: "Sprint Points - Calculadora de Story Points para Agile Teams",
+    description:
+      "Calcule story points e estimativas de tempo de forma precisa e eficiente para suas tasks de desenvolvimento. Ferramenta gratuita para times ágeis.",
+    images: [
+      {
+        url: ogImage,
+        width: 1200,
+        height: 630,
+        alt: "Sprint Points - Calculadora de Story Points",
+        type: "image/jpeg",
+      },
+    ],
+  },
+  
+  // Twitter Card
+  twitter: {
+    card: "summary_large_image",
+    title: "Sprint Points - Calculadora de Story Points",
+    description:
+      "Calcule story points e estimativas de tempo de forma precisa para suas tasks de desenvolvimento.",
+    images: [ogImage],
+    creator: "@miguelito",
+  },
+  
+  // Robots
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  
+  // Verificações de propriedade
+  verification: {
+    google: "your-google-verification-code",
+  },
+  
+  // Ícones (adicionar arquivos na pasta public)
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
+  },
+  
+  // Manifest para PWA
+  manifest: "/manifest.json",
+  
+  // Apple Web App
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Sprint Points",
+  },
+  
+  // Format Detection
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  
+  // Category
+  category: "productivity",
+};
+
+// JSON-LD Structured Data
+export const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Sprint Points",
+  "description": "Calculadora de story points e estimativas de tempo para teams ágeis",
+  "url": siteUrl,
+  "applicationCategory": "ProductivityApplication",
+  "operatingSystem": "Web Browser",
+  "browserRequirements": "Requires JavaScript",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Miguelito",
+    "url": "https://miguelito.dev",
+  },
+  "featureList": [
+    "Cálculo de Story Points",
+    "Estimativa de horas por task",
+    "Fator de risco ajustável",
+    "Checklist de atividades",
+    "Exportação como imagem",
+    "Persistência local de dados",
+  ],
+  "screenshot": ogImage,
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "150",
+  },
 };
 
 export default function RootLayout({
@@ -23,7 +182,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

@@ -1,0 +1,19 @@
+{
+  "name": "Sprint Points - Calculadora de Story Points",
+  "short_name": "Sprint Points",
+  "description": "Calcule story points e estimativas de tempo de forma precisa para suas tasks de desenvolvimento",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#7c3aed",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["productivity", "utilities"],
+  "lang": "pt-BR"
+}

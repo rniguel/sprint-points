@@ -117,11 +117,6 @@ export default function Home() {
             </aside>
           </div>
         </main>
-
-        {/* Footer */}
-        <footer className="py-8 text-center text-muted-foreground text-sm" role="contentinfo">
-          <p>Feito com 💜 para agilizar suas sprints</p>
-        </footer>
       </div>
   );
 }

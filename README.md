@@ -1,8 +1,8 @@
 # 🚀 Sprint Points
 
-> **Calcule story points e estimativas de tempo de forma precisa e eficiente para suas tasks de desenvolvimento.**
+> **Converta e calcule tempo de tasks em diferentes métricas: horas, dias úteis e story points.**
 
-Uma ferramenta moderna e intuitiva para ajudar times de desenvolvimento a estimar esforços de forma mais assertiva, considerando múltiplas atividades e fatores de risco.
+Uma ferramenta moderna e intuitiva para ajudar times de desenvolvimento a estimar esforços de forma mais assertiva, convertendo tempo entre múltiplas métricas e considerando fatores de risco.
 
 ![Sprint Points](https://img.shields.io/badge/Next.js-16.1.6-black?logo=next.js&logoColor=white)
 ![React](https://img.shields.io/badge/React-19.2.3-61DAFB?logo=react&logoColor=black)
@@ -37,14 +37,14 @@ Slider interativo de 0% a 40% com indicação visual de temperatura:
 - 🟡 **11–25%**: Precisa analisar melhor o Figma, documentação ou detalhes de backend
 - 🔴 **26–40%**: Feature densa, exige análise de documentação, alinhamento com backend e revisão do Figma
 
-### 📊 Resultados Detalhados
+### 📊 Resultados em Múltiplas Métricas
 - **Horas Base**: Tempo inicial da task
 - **Atividades**: Soma das horas das atividades selecionadas
 - **Subtotal**: Total antes da margem de segurança
 - **Margem de Segurança**: Buffer para imprevistos
 - **Total em Horas**: Tempo total estimado
 - **Estimativa em Dias**: Intervalo baseado em jornada de 5-7h por dia
-- **Story Points**: Referência (1 SP = ~6 horas)
+- **Story Points**: Referência secundária (1 SP = ~6 horas)
 - **Lista de Atividades**: Visualize todas as atividades incluídas
 
 ### 💾 Persistência de Dados
@@ -206,9 +206,9 @@ estimativaDias = [ceil(total / 7), ceil(total / 5)]
 | **Atividades** (6 atividades selecionadas) | 7.5h |
 | **Subtotal** | 15.5h |
 | **Margem de Segurança** (15%) | 2.3h |
-| **Total** | **17.8h** |
-| **Estimativa em Dias** | 3–4 dias |
-| **Story Points** | 3 SP |
+| **Total em Horas** | **17.8h** |
+| **Estimativa em Dias** | **3–4 dias** |
+| **Story Points** (referência) | 3 SP |
 
 ---
 

@@ -27,11 +27,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   // Metadata básica
   title: {
-    default: "Sprint Points - Calculadora de Story Points para Agile Teams",
+    default: "Sprint Points - Estimativa de Tempo para Tasks de Desenvolvimento",
     template: "%s | Sprint Points",
   },
   description:
-    "Calcule story points e estimativas de tempo de forma precisa e eficiente para suas tasks de desenvolvimento. Ferramenta gratuita para times ágeis que usam Scrum e Kanban.",
+    "Converta e calcule tempo de tasks em diferentes métricas: horas, dias úteis e story points. Ferramenta gratuita para times ágeis que usam Scrum e Kanban.",
   
   // URLs e canonical
   metadataBase: new URL(siteUrl),
@@ -41,20 +41,20 @@ export const metadata: Metadata = {
   
   // Keywords para SEO
   keywords: [
+    "estimativa de tempo",
     "story points",
     "sprint planning",
     "scrum",
     "agile",
     "kanban",
-    "estimativa de tempo",
     "planning poker",
     "desenvolvimento de software",
     "gestão de projetos",
     "productivity",
-    "calculadora story points",
-    "sprint points",
-    "task estimation",
     "time tracking",
+    "task estimation",
+    "horas para dias",
+    "conversão de tempo",
     "desenvolvimento ágil",
     "metodologias ágeis",
   ],
@@ -70,15 +70,15 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: siteUrl,
     siteName: "Sprint Points",
-    title: "Sprint Points - Calculadora de Story Points para Agile Teams",
+    title: "Sprint Points - Estimativa de Tempo para Tasks de Desenvolvimento",
     description:
-      "Calcule story points e estimativas de tempo de forma precisa e eficiente para suas tasks de desenvolvimento. Ferramenta gratuita para times ágeis.",
+      "Converta e calcule tempo de tasks em diferentes métricas: horas, dias úteis e story points. Ferramenta gratuita para times ágeis.",
     images: [
       {
         url: ogImage,
         width: 1200,
         height: 630,
-        alt: "Sprint Points - Calculadora de Story Points",
+        alt: "Sprint Points - Estimativa de Tempo para Tasks",
         type: "image/jpeg",
       },
     ],
@@ -87,9 +87,9 @@ export const metadata: Metadata = {
   // Twitter Card
   twitter: {
     card: "summary_large_image",
-    title: "Sprint Points - Calculadora de Story Points",
+    title: "Sprint Points - Estimativa de Tempo para Tasks",
     description:
-      "Calcule story points e estimativas de tempo de forma precisa para suas tasks de desenvolvimento.",
+      "Converta tempo de tasks em diferentes métricas: horas, dias e story points.",
     images: [ogImage],
     creator: "@miguelito",
   },
@@ -145,7 +145,7 @@ export const structuredData = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "Sprint Points",
-  "description": "Calculadora de story points e estimativas de tempo para teams ágeis",
+  "description": "Conversor de tempo de tasks em múltiplas métricas: horas, dias úteis e story points",
   "url": siteUrl,
   "applicationCategory": "ProductivityApplication",
   "operatingSystem": "Web Browser",
@@ -161,8 +161,9 @@ export const structuredData = {
     "url": "https://miguelito.dev",
   },
   "featureList": [
-    "Cálculo de Story Points",
     "Estimativa de horas por task",
+    "Conversão para dias úteis (5-7h/dia)",
+    "Cálculo de Story Points como referência",
     "Fator de risco ajustável",
     "Checklist de atividades",
     "Exportação como imagem",

@@ -39,7 +39,7 @@ export default function Home() {
               </h1>
             </div>
             <p className="text-white/80 text-lg max-w-2xl mx-auto">
-              Calcule story points de forma precisa e eficiente para suas tasks
+              Converta tempo de tasks em horas, dias e story points
             </p>
           </div>
         </header>

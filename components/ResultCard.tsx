@@ -134,12 +134,15 @@ export function ResultCard({ taskName, baseHours, activities, riskFactor, result
           </p>
         </div>
 
-        {/* Story Points - Secundário */}
+        {/* Story Points - Apenas referência */}
         <div className="p-4 rounded-xl bg-muted/30">
           <div className="flex justify-between items-center text-sm">
             <span className="text-muted-foreground">Story Points (ref.)</span>
             <span className="font-semibold text-muted-foreground">{result.storyPoints} SP</span>
           </div>
+          <p className="text-xs text-muted-foreground mt-1 text-center">
+            1 SP ≈ 6 horas (use apenas como referência)
+          </p>
         </div>
 
         {/* Botão de Exportar */}

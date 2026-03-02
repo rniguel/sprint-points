@@ -261,7 +261,11 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ## 👨‍💻 Autor
 
-Feito com 💜 para agilizar suas sprints
+**Miguel Riquelme** - Frontend Developer
+
+- 🌐 [miguelito.dev](https://miguelito.dev)
+- 💜 Criador de ferramentas para desenvolvedores
+- 🚀 Especialista em React, Next.js e UX
 
 ---
 

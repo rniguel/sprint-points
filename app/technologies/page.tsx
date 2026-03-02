@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Code, Type, Palette, Component, Image, Square } from "lucide-react";
+import { ArrowRight, Code, Type, Palette, Component, Image, Square, ArrowLeft } from "lucide-react";
 
 const technologies = [
   {
@@ -70,6 +70,17 @@ export default function TechnologiesPage() {
       {/* Hero */}
       <section className="gradient-bg text-white py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
+          {/* Botão Voltar */}
+          <div className="mb-6">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors text-sm font-medium"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Voltar para a calculadora
+            </Link>
+          </div>
+
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Sprint Points
           </h1>

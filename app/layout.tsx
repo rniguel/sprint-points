@@ -63,8 +63,10 @@ export const metadata: Metadata = {
   
   // Autor e organização
   authors: [
-    { name: "Miguelito", url: "https://miguelito.dev" },
+    { name: "Miguel Riquelme", url: "https://miguelito.dev" },
   ],
+  creator: "Miguel Riquelme",
+  publisher: "Miguel Riquelme",
   
   // Open Graph / Facebook / LinkedIn
   openGraph: {
@@ -159,8 +161,9 @@ export const structuredData = {
   },
   "author": {
     "@type": "Person",
-    "name": "Miguelito",
+    "name": "Miguel Riquelme",
     "url": "https://miguelito.dev",
+    "jobTitle": "Frontend Developer",
   },
   "featureList": [
     "Estimativa de horas por task",

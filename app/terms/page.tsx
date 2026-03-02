@@ -1,9 +1,21 @@
 import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 
 export default function TermsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/30 py-20 px-4">
       <div className="max-w-3xl mx-auto">
+        {/* Botão Voltar */}
+        <div className="mb-8">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Voltar para a calculadora
+          </Link>
+        </div>
+
         {/* Header */}
         <div className="mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">

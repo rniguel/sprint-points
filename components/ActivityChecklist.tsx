@@ -4,7 +4,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Plus, X, Clock } from "lucide-react";
+import { Plus, X, Clock, Trash2 } from "lucide-react";
 
 interface ActivityChecklistProps {
   activities: Activity[];
@@ -88,16 +88,21 @@ export function ActivityChecklist({
                 disabled={!activity.enabled}
               />
               <span className="text-sm font-medium text-muted-foreground w-6">h</span>
-              {activity.custom && (
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => onRemoveActivity(activity.id)}
-                  className="text-red-500 hover:text-red-700 hover:bg-red-50 h-9 w-9 p-0 rounded-lg"
-                >
-                  <X className="w-4 h-4" />
-                </Button>
-              )}
+              
+              {/* Botão de remover atividade */}
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => {
+                  if (activity.custom || window.confirm(`Deseja remover "${activity.label}"? Esta ação não pode ser desfeita.`)) {
+                    onRemoveActivity(activity.id);
+                  }
+                }}
+                className="text-muted-foreground hover:text-red-600 hover:bg-red-50 h-9 w-9 p-0 rounded-lg opacity-0 group-hover:opacity-100 transition-all"
+                title={activity.custom ? "Remover atividade customizada" : "Remover atividade"}
+              >
+                <Trash2 className="w-4 h-4" />
+              </Button>
             </div>
           </div>
         ))}
